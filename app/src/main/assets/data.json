@@ -1,0 +1,68 @@
+{
+  "status": true,
+  "data": [{
+    "id": 1,
+    "title": "Social Engineering",
+    "details": [{
+      "topic": "Introduction",
+      "desc": "socialengineering1"
+    },
+      {
+        "topic": "Types of Social Engineering",
+        "desc": "socialengineering2"
+      },
+      {
+        "topic": "Social Engineering Nowadays",
+        "desc": "socialengineering3"
+      },
+      {
+        "topic": "Reconnaissance",
+        "desc": "socialengineering4"
+      }
+    ]
+  },
+    {
+      "id": 2,
+      "title": "Malware",
+      "details": [{
+        "topic": "Introduction",
+        "desc": "malware1"
+      },
+        {
+          "topic": "Types of Malware",
+          "desc": "malware2"
+        },
+        {
+          "topic": "Malware Detection",
+          "desc": "malware3"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cyber Attacks",
+      "details": [{
+        "topic": "Introduction",
+        "desc": "cyberattack1"
+      },
+        {
+          "topic": "Social engineering education",
+          "desc": "cyberattack2"
+        },
+        {
+          "topic": "Measures to manage Cyber Attacks",
+          "desc": "cyberattack3"
+        },
+        {
+          "topic": "Protect my Device",
+          "desc": "cyberattack3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Quizs",
+      "details": []
+    }
+  ]
+}

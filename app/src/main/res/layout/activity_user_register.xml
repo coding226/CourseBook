@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        tools:context=".activities.UserLoginActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Register"
+                    android:textSize="@dimen/_30sdp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/_20sdp"
+                    android:src="@drawable/ic_launcher" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextFieldUserName"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Name"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_userreg_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextFieldMobileNumber"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Email"
+                        android:visibility="visible">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_userreg_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/outlinedTextFieldPassword"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:hint="Password"
+                        android:visibility="visible"
+                        app:endIconMode="password_toggle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_userreg_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_12sdp"
+                            app:backgroundTint="@color/colorAccent" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/btn_userreg_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="Register"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_userreg_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="Back"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

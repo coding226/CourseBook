@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Welcome to SE-Training"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/ic_launcher" />
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_curvy_bg_black"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="Login" />
+
+</LinearLayout>

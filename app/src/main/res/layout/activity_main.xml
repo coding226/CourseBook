@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ibMenu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/transparent"
+                android:padding="8dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="Courses"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@color/transparent"
+                android:clickable="false"
+                android:scaleType="fitXY"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/navigation" />
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/navigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="?android:attr/windowBackground"
+                    app:menu="@menu/bottom_navigation" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

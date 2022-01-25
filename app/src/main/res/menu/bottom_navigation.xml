@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_tab_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_mycourses"
+        android:icon="@drawable/ic_tab_onlinecourse"
+        android:title="My Courses" />
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_tab_account"
+        android:title="Account" />
+
+
+
+
+</menu>

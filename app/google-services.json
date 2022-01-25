@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "176351310002",
+    "project_id": "coursebook-32c2f",
+    "storage_bucket": "coursebook-32c2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176351310002:android:7e2e5348c7fabb5bc459ab",
+        "android_client_info": {
+          "package_name": "com.coursebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176351310002-m2dri0gsa7dgng3nbpsb10er8lselplj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coursebook",
+            "certificate_hash": "22dddfc80aff9f2a193c64e1ad1824d865c97387"
+          }
+        },
+        {
+          "client_id": "176351310002-5cvhf1kj4v4vi6pg3bi8qvj1r9n739m7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3x8U5Lrm3k4fXunOm98lAfSZyRksYDIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176351310002-5cvhf1kj4v4vi6pg3bi8qvj1r9n739m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

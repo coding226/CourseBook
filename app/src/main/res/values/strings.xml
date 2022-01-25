@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CourseBook</string>
+
+    <string-array name="courseNames">
+        <item>Social Engineering</item>
+        <item>Malware</item>
+        <item>Cyber Attacks</item>
+        <item>Quizs</item>
+    </string-array>
+</resources>
