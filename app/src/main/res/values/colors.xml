@@ -13,4 +13,13 @@
 
     <color name="background">#0D6DB5FD</color>
 
+
+    <color name="signin_blue">#003ba3</color>
+    <color name="signup_blue">#0957df</color>
+    <color name="signup_blue1">#980957df</color>
+    <color name="position_orange">#E04F07</color>
+    <color name="position_blue">#039CB3</color>
+    <color name="position_yellow">#eaa30d</color>
+    <color name="position_purpole">#a514fa</color>
+
 </resources>

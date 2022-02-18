@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,12 +19,9 @@ import com.utils.PrefrenceManager;
 import com.utils.UserModel;
 
 public class RegistrationActivity extends BaseActivity implements View.OnClickListener {
-    private TextInputLayout outlinedTextFieldUserName;
-    private TextInputEditText et_userreg_name;
-    private TextInputLayout outlinedTextFieldMobileNumber;
-    private TextInputEditText et_userreg_email;
-    private TextInputLayout outlinedTextFieldPassword;
-    private TextInputEditText et_userreg_password;
+    private EditText et_userreg_name;
+    private EditText et_userreg_email;
+    private EditText et_userreg_password;
     private Button btn_userreg_register;
     private Button btn_userreg_back;
 
@@ -76,7 +72,7 @@ public class RegistrationActivity extends BaseActivity implements View.OnClickLi
 
                                 Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
                                 startActivity(intent);
-
+                                RegistrationActivity.this.finish();
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -103,12 +99,9 @@ public class RegistrationActivity extends BaseActivity implements View.OnClickLi
     }
 
     private void findViews() {
-        outlinedTextFieldUserName = (TextInputLayout) findViewById(R.id.outlinedTextFieldUserName);
-        et_userreg_name = (TextInputEditText) findViewById(R.id.et_userreg_name);
-        outlinedTextFieldMobileNumber = (TextInputLayout) findViewById(R.id.outlinedTextFieldMobileNumber);
-        et_userreg_email = (TextInputEditText) findViewById(R.id.et_userreg_email);
-        outlinedTextFieldPassword = (TextInputLayout) findViewById(R.id.outlinedTextFieldPassword);
-        et_userreg_password = (TextInputEditText) findViewById(R.id.et_userreg_password);
+        et_userreg_name = findViewById(R.id.et_userreg_name);
+        et_userreg_email = findViewById(R.id.et_userreg_email);
+        et_userreg_password = findViewById(R.id.et_userreg_password);
         btn_userreg_register = (Button) findViewById(R.id.btn_userreg_register);
         btn_userreg_back = (Button) findViewById(R.id.btn_userreg_back);
 

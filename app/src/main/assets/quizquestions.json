@@ -1,0 +1,164 @@
+{
+  "status": true,
+  "data": [
+    {
+      "id": 1,
+      "title": "Quiz",
+      "details": [
+        {
+          "question": "Which type of network threat is intended to prevent authorized users from accessing resources?",
+          "options": [
+            "DoS attacks",
+            "access attacks",
+            "reconnaissance attacks",
+            "trust exploitation"
+          ],
+          "answer": "DoS attacks"
+        },
+        {
+          "question": "An email claiming that you have won the lottery, as long as you fill out the corresponding information, is an example of what type social engineering attack?",
+          "options": [
+            "Baiting ",
+            "Phishing",
+            "PiggyBacking",
+            "Baiting"
+          ],
+          "answer": "Phishing"
+        },
+        {
+          "question": "Which malicious code attack is self-contained and tries to exploit a specific vulnerability in a system being attacked?",
+          "options": [
+            "virus",
+            "worm",
+            "Trojan horse",
+            "social engineering"
+          ],
+          "answer": "worm"
+        },
+        {
+          "question": "What is the purpose of the network security accounting function?",
+          "options": [
+            "to require users to prove who they are",
+            "to determine which resources a user can access",
+            "to keep track of the actions of a user",
+            "to provide challenge and response questions"
+          ],
+          "answer": "to keep track of the actions of a user"
+        },
+        {
+          "question": "_______means the protection of data from modification by unknown usres",
+          "options": [
+            "Confidentiality",
+            "Integrity",
+            "Authentication",
+            ""
+          ],
+          "answer": "Integrity"
+        },
+        {
+          "question": "When integrity is lacking in a security system,________ occurs",
+          "options": [
+            "Database hacking",
+            "Data deletion",
+            "Data tampering",
+            "Data leakage"
+          ],
+          "answer": "Data tampering"
+        },
+        {
+          "question": "What are the types of malware?",
+          "options": [
+            "horse",
+            "worm",
+            "lion",
+            ""
+          ],
+          "answer": "worm"
+        },
+        {
+          "question": "What is trojan horse",
+          "options": [
+            "A Trojan Horse program has the appearance of having a useful and desired function",
+            "A Trojan Horse neither replicates nor copies itself, but causes damage or compromises the security of the computer",
+            "A Trojan Horse must be sent by someone or carried by another program and may arrive in the form of a joke program or software of some sort",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        },
+        {
+          "question": "Which of the following is a program capable of continually replicating with little or no user intervention?",
+          "options": [
+            "Virus",
+            "Rootkit",
+            "worm",
+            "Trojan horse"
+          ],
+          "answer": "Virus"
+        },
+        {
+          "question": "Which of these is how to properly avoid becoming a victim of social engineering?",
+          "options": [
+            "Research the fact",
+            "Delete any request for financial information or passwords",
+            "Reject request for help",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        },
+        {
+          "question": "Phishing attacks hide themselves using these techniques except:",
+          "options": [
+            "Tiny URLs",
+            "Domain names with close spelling to legitimate sites",
+            "Real logos and convincing prose",
+            "Links to legitimate sites that has been compromised to deliver malware",
+            "None of the above"
+          ],
+          "answer": "None of the above"
+        },
+        {
+          "question": "Having physical access to ones computer, even if the computer is locked, may enable the following attack except this one:",
+          "options": [
+            "Steal ones password",
+            "Install key logger",
+            "Install malware",
+            "Copy files",
+            "None of the above"
+          ],
+          "answer": "Steal ones password"
+        },
+        {
+          "question": "In social engineering, attacker use the following techniques to gain victim's trust except",
+          "options": [
+            "Appear to be an expert",
+            "Asking for help",
+            "Dressed appropriately",
+            "Speak with certain accents",
+            "Directly ask for sensitive information"
+          ],
+          "answer": "Directly ask for sensitive information"
+        },
+        {
+          "question": "Which of the following is a valid difference between a Virus and a Spyware?",
+          "options": [
+            "Spyware damages data and also steals sensitive private information",
+            "Virus damages data, spyware steals sensitive private information",
+            "Spyware damages data, Virus steals sensitive private information",
+            "Virus damages data and also steals sensitive private information"
+          ],
+          "answer": "Virus damages data, spyware steals sensitive private information"
+        },
+        {
+          "question": "What happens during the TCP attacks, Denial of service?",
+          "options": [
+            "A virus is sent to disable their dos prompt",
+            "Viruses are sent to their ISP to deny them tech support",
+            "A worm is loaded onto the victim’s computer to disable their keyboard",
+            "Information is repeatedly sent to the victim to consume their system resources, causing them to shut down"
+          ],
+          "answer": "Information is repeatedly sent to the victim to consume their system resources, causing them to shut down"
+        }
+      ]
+    }
+  ]
+}

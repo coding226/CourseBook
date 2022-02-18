@@ -1,0 +1,119 @@
+{
+  "status": true,
+  "data": [{
+    "id": 1,
+    "title": "Social Engineering",
+    "details": [{
+      "question": "What is the Goal of social Engineering",
+      "options": [
+        "Sabotage a person’s social media",
+        "To gain vital personal information",
+        "To catfish someone",
+        "To build trust"
+      ],
+      "answer": "To gain vital personal information"
+    },
+      {
+        "question": "Which of the following are examples of social engineering scams executed via phishing?",
+        "options": [
+          "Banking Link Scams",
+          "Facebook Message Link Scams",
+          "Fax Notice Scams",
+          "All the above"
+        ],
+        "answer": "All the above"
+      },
+      {
+        "question": "What is Reconnaissance?",
+        "options": [
+          "gaining and discovering information about a system",
+          "malicious software that is being developed by cybercriminals",
+          "program installed on your computer without your knowledge",
+          "computer is being compromised by malware"
+        ],
+        "answer": "gaining and discovering information about a system"
+      },
+      {
+        "question": "What is the objective of a network reconnaissance attack?",
+        "options": [
+          "Unauthorized manipulation of data",
+          "Disabling network system or services",
+          "Discovery and mapping of systems",
+          "Denying access to resources by legitimate users"
+        ],
+        "answer": "Discovery and mapping of systems"
+      }
+    ]
+  },
+    {
+      "id": 2,
+      "title": "Malware",
+      "details": [{
+        "question": "What is malware?",
+        "options": [
+          "a program",
+          "an antivirus",
+          "an operating system",
+          "software intended to damage or disable computers or computer systems"
+        ],
+        "answer": "software intended to damage or disable computers or computer systems"
+      },
+        {
+          "question": "How does a computer virus infect a pc?",
+          "options": [
+            "Suspicious web links",
+            "Email attachments",
+            "Attached to files on memory sticks",
+            "All of the above"
+          ],
+          "answer": "All of the above"
+        },
+        {
+          "question": "What does a Trojan Horse do?",
+          "options": [
+            "deletes everything on a user’s computer",
+            "stores information",
+            "transfers data and information",
+            "gives malicious users remote control over a user’s compute"
+          ],
+          "answer": "gives malicious users remote control over a user’s compute"
+        },
+        {
+          "question": "What is an example of adware?",
+          "options": [
+            "Google",
+            "Twitter",
+            "DeskAd",
+            "Snapchat"
+          ],
+          "answer": "DeskAd"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cyber Attacks",
+      "details": [{
+        "question": "What are the measures to manage cyber-attacks?",
+        "options": [
+          "update Software",
+          "System Backup",
+          "maintain Privilege and Accounts",
+          "All the above"
+        ],
+        "answer": "All the above"
+      },
+        {
+          "question": "Staff should only be educated about Social engineering?",
+          "options": [
+            "Yes",
+            "No",
+            "",
+            ""
+          ],
+          "answer": "No"
+        }
+      ]
+    }
+  ]
+}

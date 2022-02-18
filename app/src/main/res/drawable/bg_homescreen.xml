@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:centerColor="@color/colorAccent"
+                android:endColor="@color/colorAccent"
+                android:startColor="@color/colorAccent" />
+
+        </shape>
+    </item>
+
+    <!--<item>
+        <bitmap android:src="@drawable/login_signup_textture_bg" />
+    </item>-->
+</layer-list>

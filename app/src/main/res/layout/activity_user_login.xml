@@ -43,47 +43,29 @@
                     android:layout_marginBottom="@dimen/_25sdp"
                     android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/outlinedTextFieldUserID"
-                        style="@style/TextInputLayoutStyle"
+                    <EditText
+                        android:id="@+id/et_userlogin_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10sdp"
-                        android:visibility="visible">
+                        android:hint="client@xyz.com"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12sdp"
+                        app:backgroundTint="@color/colorAccent" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_userlogin_email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="client@xyz.com"
-                            android:imeOptions="actionNext"
-                            android:inputType="textEmailAddress"
-                            android:singleLine="true"
-                            android:textSize="@dimen/_12sdp"
-                            app:backgroundTint="@color/colorAccent" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/outlinedTextFieldPassword"
-                        style="@style/TextInputLayoutStyle"
+                    <EditText
+                        android:id="@+id/et_userlogin_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="visible"
-                        app:endIconMode="password_toggle">
+                        android:hint="client@123"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12sdp"
+                        app:backgroundTint="@color/colorAccent" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_userlogin_password"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="client@123"
-                            android:imeOptions="actionDone"
-                            android:inputType="textPassword"
-                            android:singleLine="true"
-                            android:textSize="@dimen/_12sdp"
-                            app:backgroundTint="@color/colorAccent" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
                 <LinearLayout

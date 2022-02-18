@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         tv_login = findViewById(R.id.tv_login);
 
+        //PrefrenceManager.setToken(SplashActivity.this, "");
 
         cheCheckUserExistace();
     }

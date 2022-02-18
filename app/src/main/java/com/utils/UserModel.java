@@ -1,7 +1,5 @@
 package com.utils;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.io.Serializable;
 
 public class UserModel implements Serializable {

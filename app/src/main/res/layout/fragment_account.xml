@@ -41,26 +41,17 @@
                     android:layout_marginBottom="@dimen/_25sdp"
                     android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/outlinedTextFieldUserName"
-                        style="@style/TextInputLayoutStyle"
+                    <EditText
+                        android:id="@+id/et_userreg_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:hint="Name"
-                        android:visibility="visible">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/et_userreg_email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:imeOptions="actionNext"
-                            android:inputType="text"
-                            android:singleLine="true"
-                            android:textSize="@dimen/_12sdp"
-                            app:backgroundTint="@color/colorAccent" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12sdp"
+                        app:backgroundTint="@color/colorAccent" />
 
                     <TextView
                         android:layout_width="match_parent"

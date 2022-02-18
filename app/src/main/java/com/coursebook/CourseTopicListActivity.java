@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -16,10 +14,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
 import com.pojo.JResponsePOJO;
+import com.quiz.GamePlayActivity;
+import com.quiz.QuestionsListResponsePOJO;
+import com.quiz.QuizResponse;
+import com.quiz.ResultsItem;
 import com.utils.AppUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CourseTopicListActivity extends AppCompatActivity implements View.OnClickListener {
     private LinearLayout llActionBar;
@@ -47,7 +51,6 @@ public class CourseTopicListActivity extends AppCompatActivity implements View.O
             userName = extras.getString("position");
             // and get whatever type user account id is
             Log.e(TAG, "position: " + userName);
-
         }
 
         if (AppUtils.subscriptions.contains(names[position])) {
@@ -55,9 +58,8 @@ public class CourseTopicListActivity extends AppCompatActivity implements View.O
         }
 
         String Jsonfile = getJSONFile();
-        JResponsePOJO jResponsePOJO = new JResponsePOJO();
         Gson gson = new Gson();
-        jResponsePOJO = gson.fromJson(Jsonfile, JResponsePOJO.class);
+        JResponsePOJO jResponsePOJO = gson.fromJson(Jsonfile, JResponsePOJO.class);
 
         ll_cours_topics_list.removeAllViews();
         for (int i = 0; i < jResponsePOJO.getData().get(position).getDetails().size(); i++) {
@@ -66,18 +68,46 @@ public class CourseTopicListActivity extends AppCompatActivity implements View.O
             LinearLayout img_nm = (LinearLayout) view.findViewById(R.id.img_nm);
             ImageView icon = (ImageView) view.findViewById(R.id.icon);
             TextView name = (TextView) view.findViewById(R.id.name);
+            ImageView iv_topic_selection = (ImageView) view.findViewById(R.id.iv_topic_selection);
 
             name.setText("" + detailsItem.getTopic());
+            iv_topic_selection.setVisibility(View.VISIBLE);
 
             name.setTextSize(20);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(CourseTopicListActivity.this, TopicDetailsActivity.class);
-                    intent.putExtra("topictitle" , detailsItem.getTopic());
-                    intent.putExtra("topicdetails" , detailsItem.getDesc());
+                    if (detailsItem.getTopic().equals("Quiz")) {
+                        String Jsonfile = getQuestions();
+                        Gson gson = new Gson();
+                        QuizResponse quizResponse = gson.fromJson(Jsonfile, QuizResponse.class);
 
-                    startActivity(intent);
+                        QuestionsListResponsePOJO questionsListResponsePOJO = new QuestionsListResponsePOJO();
+                        List<ResultsItem> datas = new ArrayList<>();
+                        for (int j = 0; j < quizResponse.getData().get(position).getDetails().size(); j++) {
+                            ResultsItem resultsItem = new ResultsItem();
+                            QuizResponse.Detail detail = quizResponse.getData().get(position).getDetails().get(j);
+                            resultsItem.setCorrectAnswer(detail.getAnswer());
+                            resultsItem.setQuestion(detail.getQuestion());
+                            resultsItem.setOptions(detail.getOptions());
+                            datas.add(resultsItem);
+                        }
+                        questionsListResponsePOJO.setResults(datas);
+
+                        Log.e(TAG, "onClick: " + datas.get(0).getOptions().size());
+                        Bundle bundle = new Bundle();
+                        bundle.putString("type", "" + quizResponse.getData().get(position).getTitle());
+                        bundle.putString("totalQuestions", String.valueOf(datas.size()));
+                        bundle.putSerializable("questionsListResponsePOJO", questionsListResponsePOJO);
+                        Intent intent = new Intent(CourseTopicListActivity.this, GamePlayActivity.class);
+                        intent.putExtras(bundle);
+                        CourseTopicListActivity.this.startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(CourseTopicListActivity.this, TopicDetailsActivity.class);
+                        intent.putExtra("topictitle", detailsItem.getTopic());
+                        intent.putExtra("topicdetails", detailsItem.getDesc());
+                        startActivity(intent);
+                    }
                 }
             });
 
@@ -97,7 +127,6 @@ public class CourseTopicListActivity extends AppCompatActivity implements View.O
             }
         });
     }
-
 
     @Override
     public void onClick(View v) {
@@ -131,4 +160,21 @@ public class CourseTopicListActivity extends AppCompatActivity implements View.O
         }
         return json;
     }
+
+    private String getQuestions() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("questions.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
 }

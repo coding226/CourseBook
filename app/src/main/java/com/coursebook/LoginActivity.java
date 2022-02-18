@@ -5,25 +5,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.utils.UserModel;
 import com.utils.PrefrenceManager;
+import com.utils.UserModel;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
-    private TextInputLayout outlinedTextFieldUserID;
-    private TextInputEditText et_userlogin_email;
-    private TextInputLayout outlinedTextFieldPassword;
-    private TextInputEditText et_userlogin_password;
+    private EditText et_userlogin_email;
+    private EditText et_userlogin_password;
     private Button btn_userlogin_login;
     private Button btn_userlogin_register;
     private FirebaseAuth mAuth;
@@ -73,6 +70,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
+                                LoginActivity.this.finish();
 
                             } else {
                                 // If sign in fails, display a message to the user.
@@ -98,10 +96,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void findViews() {
-        outlinedTextFieldUserID = (TextInputLayout) findViewById(R.id.outlinedTextFieldUserID);
-        et_userlogin_email = (TextInputEditText) findViewById(R.id.et_userlogin_email);
-        outlinedTextFieldPassword = (TextInputLayout) findViewById(R.id.outlinedTextFieldPassword);
-        et_userlogin_password = (TextInputEditText) findViewById(R.id.et_userlogin_password);
+        et_userlogin_email = findViewById(R.id.et_userlogin_email);
+        et_userlogin_password = findViewById(R.id.et_userlogin_password);
         btn_userlogin_login = (Button) findViewById(R.id.btn_userlogin_login);
         btn_userlogin_register = (Button) findViewById(R.id.btn_userlogin_register);
 

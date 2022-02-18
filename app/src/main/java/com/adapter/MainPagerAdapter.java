@@ -1,6 +1,5 @@
 package com.adapter;
 
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -23,7 +22,6 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-
         Fragment fragment = null;
         if (i == 0) {
             fragment = new HomeFragment();
@@ -40,5 +38,4 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
     public int getCount() {
         return mFragmentItems.size();
     }
-
 }

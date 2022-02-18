@@ -19,6 +19,7 @@
             android:id="@+id/img_nm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_topic_selection"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="@dimen/_2sdp">
@@ -47,6 +48,14 @@
                 android:textSize="@dimen/_9sdp" />
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/iv_topic_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_check_box_24"
+            android:visibility="gone" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

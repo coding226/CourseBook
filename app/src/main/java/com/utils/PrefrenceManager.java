@@ -13,7 +13,7 @@ public class PrefrenceManager {
     }
 
     public static String getToken(Context activity) {
-        return Prefrence.readString(activity, Prefrence.TOKEN, "token");
+        return Prefrence.readString(activity, Prefrence.TOKEN, "");
     }
 
     public static void setUserData(Context activity, String u_name) {
